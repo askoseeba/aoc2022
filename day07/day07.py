@@ -9,9 +9,7 @@ sizes = []
 def dir_size(data):
     size = 0
     data.pop(0) # Remove the cd command
-    while True:
-        if len(data) == 0:
-            break
+    while len(data) > 0:
         if data[0][0] != "$":
             size += int(data[0].split(" ")[0])
             data.pop(0)
